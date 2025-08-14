@@ -59,7 +59,7 @@
             "3": [
               {
                 "play": [
-                  "say:Please record your 65 second voicemail now, and press pund to end early.",
+                  "say:Please record your 65 second voicemail now, and press pound to end early.",
                   "silence:65"
                 ]
               },
@@ -75,7 +75,7 @@
             "three": [
               {
                 "play": [
-                  "say:Please record your 65 second voicemail now, and press pund to end early.",
+                  "say:Please record your 65 second voicemail now, and press pound to end early.",
                   "silence:65"
                 ]
               },
