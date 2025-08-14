@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "sections": {
+    "main": [
+      {
+        "prompt": {
+          "play": "say:Please enter or say one for Support, two for sales, or three to leave a voicemail.",
+          "speech_language": "en-US",
+          "max_digits": 1,
+          "speech_hints": [
+            "one",
+            "two",
+            "three",
+            "four",
+            "five",
+            "six",
+            "seven",
+            "eight",
+            "nine"
+          ]
+        }
+      },
+      {
+        "switch": {
+          "variable": "prompt_value",
+          "default": [
+            {
+              "play": {
+                "url": "https://example.com/bad_input.wav"
+              }
+            },
+            {
+              "transfer": {
+                "dest": "main"
+              }
+            }
+          ],
+          "case": {
+            "1": [
+              {
+                "play": "say:Transfering to support. Goodbye!"
+              }
+            ],
+            "one": [
+              {
+                "play": "say:Transfering to support. Goodbye!"
+              }
+            ],
+            "2": [
+              {
+                "play": "say:Transfering to sales. Goodbye!"
+              }
+            ],
+            "two": [
+              {
+                "play": "say:Transfering to sales. Goodbye!"
+              }
+            ],
+            "3": [
+              {
+                "play": [
+                  "say:Please record your 65 second voicemail now, and press pund to end early.",
+                  "silence:65"
+                ]
+              },
+              {
+                "record_call": {
+                  "beep": true,
+                  "stereo": true,
+                  "format": "wav",
+                  "terminators": "#"
+                }
+              }
+            ],
+            "three": [
+              {
+                "play": [
+                  "say:Please record your 65 second voicemail now, and press pund to end early.",
+                  "silence:65"
+                ]
+              },
+              {
+                "record_call": {
+                  "beep": true,
+                  "stereo": true,
+                  "format": "wav",
+                  "terminators": "#"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
